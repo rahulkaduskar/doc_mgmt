@@ -1,0 +1,9 @@
+{:uriI"|file://app/assets/template/blogs/new.html?type=text/html&id=13a361c1942c875a15834ebcc0337b0bc490d9dd1efba6649e2ab5c0a6ea4f2a:ET:load_pathI"app/assets/template;T:filenameI"'app/assets/template/blogs/new.html;T:	nameI"blogs/new;T:logical_pathI"blogs/new.html;T:content_typeI"text/html;T:sourceI"˜<form ng-submit="submit()" role="form" ng-init="blog = {}" ng-controller="BlogsCreateCtrl">
+
+<div ng-include='"assets/blogs/_form.html"'></div>
+
+</form>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"5file-digest://app/assets/template/blogs/new.html;TTF:charsetI"
+utf-8;F:digest"%o~|¢ª¾¶fu IMÅ( Õ±L>~¼^Yñ`:lengthi˜:dependencies_digest"%¥Åt=£Hƒ‰“mßkœD¯Ì)™kº}º¢,ş·¾,J:idI"E13a361c1942c875a15834ebcc0337b0bc490d9dd1efba6649e2ab5c0a6ea4f2a;F:
+mtimel+ŠSóW

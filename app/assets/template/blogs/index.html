@@ -1,0 +1,17 @@
+<div class="col-lg-12">
+  <h1>Listing Blogs</h1>
+  <div ng-controller="BlogsListCtrl" class="col-lg-12" >
+    <div class="row" ng-repeat="blog in blogs">
+      <h3>{{blog.title}}</h3>
+      <div class="content" >
+        <div  id="title" ng-bind-html="renderHtml(blog.content)" ></div>
+      </div>
+      <span> 
+        <a ng-href="#/blogs/edit/{{blog.id}}"  >Edit</a> | 
+        <a ng-href="#/blogs/show/{{blog.id}}"  >Show</a> | 
+        <a data-ng-click="delete(blog)">Delete</a>
+      </span>
+    </div>
+  </div>
+  <br>
+</div>

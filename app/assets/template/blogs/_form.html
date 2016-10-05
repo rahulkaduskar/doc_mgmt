@@ -1,0 +1,15 @@
+<div class="col-lg-9">
+	<div class="form-group">
+    <label for="inputTitle">Title</label>
+    <input type="text" class="form-control" id="inputTitle" placeholder="Title" ng-model="blog.title">
+	</div>
+	<div class="form-group">
+    <label for="textareaContent">Content</label>
+    <textarea class="form-control" rows="19" id="textareaContent" ckeditor="editorOptions" ng-model="blog.content"></textarea>
+	</div>
+	<div class="form-actions">
+    <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-primary">Save</button>
+    <span ng-if="dataLoading" >Loading...</span>
+    <a href="#/login" class="btn btn-link">Cancel</a>
+  </div>
+</div>

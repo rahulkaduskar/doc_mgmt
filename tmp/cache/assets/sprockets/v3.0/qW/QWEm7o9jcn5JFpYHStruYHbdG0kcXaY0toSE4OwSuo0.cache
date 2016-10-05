@@ -1,0 +1,19 @@
+{:uriI"~file://app/assets/template/blogs/_form.html?type=text/html&id=58974f66bdfe01ecd1b3d294037eb4ab6bac7980434b129d1d08d3dc4726c7b0:ET:load_pathI"app/assets/template;T:filenameI")app/assets/template/blogs/_form.html;T:	nameI"blogs/_form;T:logical_pathI"blogs/_form.html;T:content_typeI"text/html;T:sourceI"‰<div class="col-lg-9">
+	<div class="form-group">
+    <label for="inputTitle">Title</label>
+    <input type="text" class="form-control" id="inputTitle" placeholder="Title" ng-model="blog.title">
+	</div>
+	<div class="form-group">
+    <label for="textareaContent">Content</label>
+    <textarea class="form-control ckeditor" rows="19" id="textareaContent" ng-model="blog.content"></textarea>
+	</div>
+	<div class="form-actions">
+    <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-primary">Save</button>
+    <span ng-if="dataLoading" >Loading...</span>
+    <a href="#/login" class="btn btn-link">Cancel</a>
+  </div>
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"7file-digest://app/assets/template/blogs/_form.html;TTF:charsetI"
+utf-8;F:digest"%ïLkŒîÜ{şÇwk#å¡XVçO‰«#[•êË:lengthi‰:dependencies_digest"%Zşs3yÈÊø…d¬ä+·5bë}£ÀCäF½·İí’:idI"E58974f66bdfe01ecd1b3d294037eb4ab6bac7980434b129d1d08d3dc4726c7b0;F:
+mtimel+qóW

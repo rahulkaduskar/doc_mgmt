@@ -1,0 +1,19 @@
+{:uriI"~file://app/assets/template/blogs/_form.html?type=text/html&id=014cbf819d16f34dffbd9db5ee0fa7a2f81b57009c5fe4a92464ad1f487fe7e8:ET:load_pathI"app/assets/template;T:filenameI")app/assets/template/blogs/_form.html;T:	nameI"blogs/_form;T:logical_pathI"blogs/_form.html;T:content_typeI"text/html;T:sourceI"0<div class="col-lg-9">
+	<div class="form-group">
+    <label for="inputTitle">Title</label>
+    <input type="text" class="form-control" id="inputTitle" placeholder="Title" ng-model="blog.title">
+	</div>
+	<div class="form-group">
+
+     <div ckeditor="options" ng-model="blog" ready="onReady()"></div>
+	</div>
+	<div class="form-actions">
+    <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-primary">Save</button>
+    <span ng-if="dataLoading" >Loading...</span>
+    <a href="#/login" class="btn btn-link">Cancel</a>
+  </div>
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"7file-digest://app/assets/template/blogs/_form.html;TTF:charsetI"
+utf-8;F:digest"%Ô„}.ƒ†·∫ô®ø‹£IπG!…cAW°ê3VŸ_ºGç:lengthi0:dependencies_digest"%~ÇŒû§nç´ F›rÀsÇ≠‚¨∂JÉZkC‘CËr:idI"E014cbf819d16f34dffbd9db5ee0fa7a2f81b57009c5fe4a92464ad1f487fe7e8;F:
+mtimel+ÄnÛW

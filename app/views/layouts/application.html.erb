@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="docMgmtApp">
+	<head>
+	  <title>SinglePageApp</title>
+	  <%= stylesheet_link_tag    'application', media: 'all' %>
+	  <%= javascript_include_tag 'application' %>
+	   <%= javascript_include_tag '/assets/ckeditor/ckeditor' %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+
+	  <div ng-include='"assets/header.html"'></div>
+
+	  <div class="col-sm-8 col-sm-offset-2">
+	    <div ng-hide ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash"><span ng-bind="flash.message"></span> 
+	    </div>
+	    <div ng-view></div>
+	  </div>
+
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<h4> Sign In</h4>
+<div class="col-sm-4">
+
+  <form ng-submit="submit()" role="form" ng-init="loginForm = {}" ng-controller="UserSessionsCtrl">
+    <div class="form-group">
+      <label>email</label>
+      <input type="email" id="email" name="email" ng-model="loginForm.email" required="required" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>password</label>
+      <input type="password" id="password" name="password" ng-model="loginForm.password" required="required" class="form-control"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+  </form>
+</div>

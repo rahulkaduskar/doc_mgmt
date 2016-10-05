@@ -1,0 +1,29 @@
+{:uriI"~file://app/assets/template/blogs/index.html?type=text/html&id=ba7e5fae892e8677f5633d3510fa53927f8d7862d79f12541866987dbe267952:ET:load_pathI"app/assets/template;T:filenameI")app/assets/template/blogs/index.html;T:	nameI"blogs/index;T:logical_pathI"blogs/index.html;T:content_typeI"text/html;T:sourceI"<div class="col-sm-4">
+  <h1>Listing Blogs</h1>
+  <div ng-controller="BlogsListCtrl">
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Content</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="blog in blogs">
+          <td>{{blog.title}}</td>
+          <td>{{blog.content}}</td>
+          <td>
+          <a ng-href="#/blog/show/{{blog.id}}" >Show</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"7file-digest://app/assets/template/blogs/index.html;TTF:charsetI"
+utf-8;F:digest"%xÔüÎ¬£Þ¤î¬/íC|¤¯B½mYO>û‘°ËÃ«­ÅT:lengthi:dependencies_digest"%C¡•V¸_PÆfk‹‰Fiâl\#3|jLpðÚd+šS:idI"Eba7e5fae892e8677f5633d3510fa53927f8d7862d79f12541866987dbe267952;F:
+mtimel+Ô©òW

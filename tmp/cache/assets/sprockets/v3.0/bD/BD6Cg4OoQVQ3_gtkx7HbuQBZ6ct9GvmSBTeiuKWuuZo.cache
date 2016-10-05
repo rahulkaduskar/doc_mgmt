@@ -1,0 +1,22 @@
+{:uriI"„file://app/assets/template/user_sessions/new.html?type=text/html&id=eeea71eeeb02c4cc4e38a48dbe2bf9dfc482232ba32f1234c8cfe22f7ec85b21:ET:load_pathI"app/assets/template;T:filenameI"/app/assets/template/user_sessions/new.html;T:	nameI"user_sessions/new;T:logical_pathI"user_sessions/new.html;T:content_typeI"text/html;T:sourceI"V<h4> Sign In</h4>
+<div class="col-sm-4">
+
+  <form ng-submit="submit()" role="form" ng-init="loginForm = {}" ng-controller="UserSessionsCtrl">
+    <div class="form-group">
+      <label>email</label>
+      <input type="email" name="email" ng-model="loginForm.email" required="required" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>password</label>
+      <input type="password" name="password" ng-model="loginForm.password" required="required" class="form-control"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+  </form>
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"=file-digest://app/assets/template/user_sessions/new.html;TTF:charsetI"
+utf-8;F:digest"%O1‘þ2ÕÄ²d”8¨îa<›1ËØO®I<,:lengthiV:dependencies_digest"%¾ìx—„¾!û•õÐ¸ž
+[tÛ(Ís(ªLp ñ:idI"Eeeea71eeeb02c4cc4e38a48dbe2bf9dfc482232ba32f1234c8cfe22f7ec85b21;F:
+mtimel+…tòW

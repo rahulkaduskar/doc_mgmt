@@ -1,0 +1,34 @@
+{:uriI"|file://app/assets/template/users/new.html?type=text/html&id=1ab49f904cf34ade75278b0a090a309aed131e761c257882b530da24952447d8:ET:load_pathI"app/assets/template;T:filenameI"'app/assets/template/users/new.html;T:	nameI"users/new;T:logical_pathI"users/new.html;T:content_typeI"text/html;T:sourceI"1<div class="col-md-6 col-md-offset-3">
+  <h2>Register</h2>
+  <form name="form" ng-submit="submit()" role="form" ng-controller="UsersCtrl" >
+    <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+      <label for="username">Name</label>
+      <input type="text" name="Name" id="firstName" class="form-control" ng-model="user.name" required />
+      <span ng-show="form.name.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+      <label for="username">Email</label>
+      <input type="text" name="email" id="email" class="form-control" ng-model="user.email" required />
+      <span ng-show="form.email.$dirty && form.username.$error.required" class="help-block">Email is required</span>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" class="form-control"  ng-minlength="5" ng-model="user.password" required />
+      <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+      <label for="password">Password</label>
+      <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" ng-minlength="5" ng-model="user.password_confirmation" required />
+      <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password confirmation is required</span>
+    </div>
+    <div class="form-actions">
+      <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-primary">Register</button>
+      <span ng-if="dataLoading" >Loading...</span>
+      <a href="#/login" class="btn btn-link">Cancel</a>
+    </div>
+  </form>
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"5file-digest://app/assets/template/users/new.html;TTF:charsetI"
+utf-8;F:digest"%œ›ç”ýú¢›]ý¯xÂ€™•¯#ÆÀclc²ˆT—^p:lengthi1:dependencies_digest"%¢>-É]Ì)€f[–¢ØëÞjçûtªg¹1W×3$NÉ:idI"E1ab49f904cf34ade75278b0a090a309aed131e761c257882b530da24952447d8;F:
+mtimel+ö†òW

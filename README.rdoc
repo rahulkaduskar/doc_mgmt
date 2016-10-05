@@ -1,0 +1,38 @@
+== README
+
+Steps for how to Launch the Application:
+
+Things you will require for Running the Application:
+
+Ruby Version 2.3.1
+Rails Version 4.2.7
+Internet Connection
+
+Steps to Run the Application:
+After all the above mentioned requirments are fullfilled.
+Open terminal and go to root directory of the Application and execute the following command:
+Bundle Install (This will install all the required gems)
+
+Before starting please configure Database in config/database.yml
+Once MySql database credentials are specified as above, execute the following command:
+1.rake db:create (MySql user specified above should have permission to create database and tables)
+2.rake db:migrate 
+3.rake db:seed (This will add Test data.)
+
+User Details:
+user : user1@test.com /test12345
+
+
+
+
+Please check db/seeds.rb for test data.
+
+How to run Application after installation:
+1. Open two terminal. Go to application path & start your rails application using < rails s > command
+2. Open browser and go to localhost:3000.
+
+
+For Testing:
+
+Command To execute automated Test Cases: rspec
+

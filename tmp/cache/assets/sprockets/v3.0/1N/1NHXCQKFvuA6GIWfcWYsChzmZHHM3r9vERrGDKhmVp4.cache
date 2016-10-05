@@ -1,0 +1,19 @@
+{:uriI"~file://app/assets/template/header.html?type=text/html&id=2026f149c71f74f42ce662bd683f6b94cd95a5dfa008eed678a33b3051afc213:ET:load_pathI"app/assets/template;T:filenameI"$app/assets/template/header.html;T:	nameI"header;T:logical_pathI"header.html;T:content_typeI"text/html;T:sourceI"|<nav class="navbar navbar-static-top navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/">Document Viewer</a>
+    </div>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-show="!user.id"><a ng-href="#/sign_up">Sign up</a></li>
+        <li ng-show="!user.id"><a ng-href="#/sign_in">Sign in</a></li>
+        <li ng-show="user.id"><a ng-href="#/posts">My Post</a></li> 
+        <li ng-show="user.id"><a ng-click='signout()' ng-controller="UserSessionsCtrl">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"2file-digest://app/assets/template/header.html;TTF:charsetI"
+utf-8;F:digest"%±ÃÀÔÍáÈÃ‹žIgÿ×¼ªU|ÎlÞd‡'©“Ø:lengthi|:dependencies_digest"%8EGÈ‡Ü¤Z„fK¸b–bQZ¼Jý²B¼ùç‚?ðr™\j:idI"E2026f149c71f74f42ce662bd683f6b94cd95a5dfa008eed678a33b3051afc213;F:
+mtimel+ŸòW
