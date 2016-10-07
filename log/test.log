@@ -1,0 +1,749 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (65.9ms)[0m  DELETE FROM "blogs";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'blogs';
+  [1m[36m (57.4ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?  [["provider", "email"], ["email", "abc1@example.com"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["tokens", "{}"], ["name", "abc1"], ["email", "abc1@example.com"], ["encrypted_password", "$2a$04$bseCOxm0ePaeejyiv5YMwepIzmOJQkppjyZaUHNKrstLJFiqhWNe6"], ["uid", "abc1@example.com"], ["created_at", "2016-10-07 05:19:52.532629"], ["updated_at", "2016-10-07 05:19:52.532629"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.540285"], ["updated_at", "2016-10-07 05:19:52.540285"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.541783"], ["updated_at", "2016-10-07 05:19:52.541783"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.542832"], ["updated_at", "2016-10-07 05:19:52.542832"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.543838"], ["updated_at", "2016-10-07 05:19:52.543838"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.544843"], ["updated_at", "2016-10-07 05:19:52.544843"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.545921"], ["updated_at", "2016-10-07 05:19:52.545921"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.546919"], ["updated_at", "2016-10-07 05:19:52.546919"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.547922"], ["updated_at", "2016-10-07 05:19:52.547922"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.548921"], ["updated_at", "2016-10-07 05:19:52.548921"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.549945"], ["updated_at", "2016-10-07 05:19:52.549945"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["tokens", "{\"kz_Gu8B9RyDpMafF1zZkQw\":{\"token\":\"$2a$10$hu9mvhbhsYOjDa/dTsFqb.WcCRY2WD4fj8ZyopXZyl.DW6VbReHwO\",\"expiry\":1477027192,\"last_token\":null,\"updated_at\":\"2016-10-07T10:49:52.615+05:30\"}}"], ["updated_at", "2016-10-07 05:19:52.616003"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1  [["uid", "abc1@example.com"]]
+  [1m[36mBlog Load (0.1ms)[0m  [1mSELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY created_at desc[0m  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[35mBlog Load (0.1ms)[0m  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY created_at desc  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?  [["provider", "email"], ["email", "abc2@example.com"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["tokens", "{}"], ["name", "abc2"], ["email", "abc2@example.com"], ["encrypted_password", "$2a$04$0n98I.mdfrrF0bu/HY9uJeE4SpMn9NbpZALj5uJZl9/ljUJJshZNe"], ["uid", "abc2@example.com"], ["created_at", "2016-10-07 05:19:52.640789"], ["updated_at", "2016-10-07 05:19:52.640789"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.642471"], ["updated_at", "2016-10-07 05:19:52.642471"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.643641"], ["updated_at", "2016-10-07 05:19:52.643641"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.644677"], ["updated_at", "2016-10-07 05:19:52.644677"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.645686"], ["updated_at", "2016-10-07 05:19:52.645686"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.646703"], ["updated_at", "2016-10-07 05:19:52.646703"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.647758"], ["updated_at", "2016-10-07 05:19:52.647758"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.648809"], ["updated_at", "2016-10-07 05:19:52.648809"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.649842"], ["updated_at", "2016-10-07 05:19:52.649842"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.650874"], ["updated_at", "2016-10-07 05:19:52.650874"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.651888"], ["updated_at", "2016-10-07 05:19:52.651888"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["tokens", "{\"TH2IKB9N5hcQtL0JfI2mlg\":{\"token\":\"$2a$10$mEd2IzekZYKZ0j7xBVbEIOACQnjXxkDTVTlu8zlsvDPVMKiXIRCqG\",\"expiry\":1477027192,\"last_token\":null,\"updated_at\":\"2016-10-07T10:49:52.717+05:30\"}}"], ["updated_at", "2016-10-07 05:19:52.718067"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mBlog Load (0.1ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY "blogs"."id" ASC LIMIT 1  [["user_id", 1]]
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1[0m  [["uid", "abc2@example.com"]]
+  [1m[35mBlog Load (0.1ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?  [["provider", "email"], ["email", "abc3@example.com"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["tokens", "{}"], ["name", "abc3"], ["email", "abc3@example.com"], ["encrypted_password", "$2a$04$Q.LbaNUEqZPbTE1.1WdLqOT4XEgI8IEFlAmn5j.biLrSYJIkMrtcC"], ["uid", "abc3@example.com"], ["created_at", "2016-10-07 05:19:52.726707"], ["updated_at", "2016-10-07 05:19:52.726707"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.728323"], ["updated_at", "2016-10-07 05:19:52.728323"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.729468"], ["updated_at", "2016-10-07 05:19:52.729468"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.730537"], ["updated_at", "2016-10-07 05:19:52.730537"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.731558"], ["updated_at", "2016-10-07 05:19:52.731558"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.732567"], ["updated_at", "2016-10-07 05:19:52.732567"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.733602"], ["updated_at", "2016-10-07 05:19:52.733602"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.734662"], ["updated_at", "2016-10-07 05:19:52.734662"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.735667"], ["updated_at", "2016-10-07 05:19:52.735667"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.736688"], ["updated_at", "2016-10-07 05:19:52.736688"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.737711"], ["updated_at", "2016-10-07 05:19:52.737711"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["tokens", "{\"80jZnAEFe1IA-9HhPJ1syQ\":{\"token\":\"$2a$10$TsAtYK4jCqORFZz69hPi1O33RV1kQl8A9nHfDzJRCHpSfn.4YVfRe\",\"expiry\":1477027192,\"last_token\":null,\"updated_at\":\"2016-10-07T10:49:52.804+05:30\"}}"], ["updated_at", "2016-10-07 05:19:52.804897"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "blogs"
+Processing by BlogsController#create as HTML
+  Parameters: {"blog"=>{"title"=>"New Title", "content"=>"<p>blog body</p>"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1[0m  [["uid", "abc3@example.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "New Title"], ["content", "<p>blog body</p>"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.810155"], ["updated_at", "2016-10-07 05:19:52.810155"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 201 Created in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?[0m  [["provider", "email"], ["email", "abc4@example.com"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["tokens", "{}"], ["name", "abc4"], ["email", "abc4@example.com"], ["encrypted_password", "$2a$04$jRkAQ.EDoROA70mFb1wnbOPF5Sv/sgYyU8bh7z8DXDg6xYZWhQNB2"], ["uid", "abc4@example.com"], ["created_at", "2016-10-07 05:19:52.815648"], ["updated_at", "2016-10-07 05:19:52.815648"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.817263"], ["updated_at", "2016-10-07 05:19:52.817263"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.818424"], ["updated_at", "2016-10-07 05:19:52.818424"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.819458"], ["updated_at", "2016-10-07 05:19:52.819458"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.820467"], ["updated_at", "2016-10-07 05:19:52.820467"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.821472"], ["updated_at", "2016-10-07 05:19:52.821472"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.822521"], ["updated_at", "2016-10-07 05:19:52.822521"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.823604"], ["updated_at", "2016-10-07 05:19:52.823604"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.824634"], ["updated_at", "2016-10-07 05:19:52.824634"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.825651"], ["updated_at", "2016-10-07 05:19:52.825651"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.826669"], ["updated_at", "2016-10-07 05:19:52.826669"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"SajQrw7D-f7UjBjlT9F4rw\":{\"token\":\"$2a$10$wgEVFpH.pqj0JRIuZ2Glq.RevgX07mwntg9uAdpI4jgBlrAchq1z.\",\"expiry\":1477027192,\"last_token\":null,\"updated_at\":\"2016-10-07T10:49:52.892+05:30\"}}"], ["updated_at", "2016-10-07 05:19:52.892880"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BlogsController#create as HTML
+  Parameters: {"blog"=>{"title"=>"", "content"=>"<p>blog body</p>"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1[0m  [["uid", "abc4@example.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?[0m  [["provider", "email"], ["email", "abc5@example.com"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["tokens", "{}"], ["name", "abc5"], ["email", "abc5@example.com"], ["encrypted_password", "$2a$04$DjsJZ72sXxgl.jqQMAAZSe4b9i4pcf.aZVAXbKz6ptdGkmcAeOJmC"], ["uid", "abc5@example.com"], ["created_at", "2016-10-07 05:19:52.910758"], ["updated_at", "2016-10-07 05:19:52.910758"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.912378"], ["updated_at", "2016-10-07 05:19:52.912378"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.913525"], ["updated_at", "2016-10-07 05:19:52.913525"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.914604"], ["updated_at", "2016-10-07 05:19:52.914604"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.915621"], ["updated_at", "2016-10-07 05:19:52.915621"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.916621"], ["updated_at", "2016-10-07 05:19:52.916621"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.917677"], ["updated_at", "2016-10-07 05:19:52.917677"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.918750"], ["updated_at", "2016-10-07 05:19:52.918750"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.919761"], ["updated_at", "2016-10-07 05:19:52.919761"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.920771"], ["updated_at", "2016-10-07 05:19:52.920771"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:52.921788"], ["updated_at", "2016-10-07 05:19:52.921788"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"lSR-WqWfnSs3gLE9w2ItBQ\":{\"token\":\"$2a$10$ASdHdgXxwAMDqYG5y8VaxeSNKe8OacfGNAQCyuCS8Q0iIXzBjSxJC\",\"expiry\":1477027192,\"last_token\":null,\"updated_at\":\"2016-10-07T10:49:52.987+05:30\"}}"], ["updated_at", "2016-10-07 05:19:52.987983"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBlog Load (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY "blogs"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Processing by BlogsController#update as HTML
+  Parameters: {"blog"=>{"content"=>"New Attribute"}, "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1  [["uid", "abc5@example.com"]]
+  [1m[36mBlog Load (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "blogs" SET "content" = ?, "updated_at" = ? WHERE "blogs"."id" = ?[0m  [["content", "New Attribute"], ["updated_at", "2016-10-07 05:19:53.000076"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[36mBlog Load (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?[0m  [["provider", "email"], ["email", "abc6@example.com"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["tokens", "{}"], ["name", "abc6"], ["email", "abc6@example.com"], ["encrypted_password", "$2a$04$cdoAGgV66SQu4ZXPA3bsNumuh9R7gVgzjN.MKTGTyg6.MOvfAHIU."], ["uid", "abc6@example.com"], ["created_at", "2016-10-07 05:19:53.006458"], ["updated_at", "2016-10-07 05:19:53.006458"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.008135"], ["updated_at", "2016-10-07 05:19:53.008135"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.009304"], ["updated_at", "2016-10-07 05:19:53.009304"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.010386"], ["updated_at", "2016-10-07 05:19:53.010386"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.011448"], ["updated_at", "2016-10-07 05:19:53.011448"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.012482"], ["updated_at", "2016-10-07 05:19:53.012482"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.013568"], ["updated_at", "2016-10-07 05:19:53.013568"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.014714"], ["updated_at", "2016-10-07 05:19:53.014714"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.015843"], ["updated_at", "2016-10-07 05:19:53.015843"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.016942"], ["updated_at", "2016-10-07 05:19:53.016942"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.018033"], ["updated_at", "2016-10-07 05:19:53.018033"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"dAaFGQ63845ou0GoFqivMg\":{\"token\":\"$2a$10$A7E/Wx8CL9azSfbF2wBgF.tQBtlO2qbZymtrztPCtBzl5LozFkpo2\",\"expiry\":1477027193,\"last_token\":null,\"updated_at\":\"2016-10-07T10:49:53.083+05:30\"}}"], ["updated_at", "2016-10-07 05:19:53.084266"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBlog Load (0.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY "blogs"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Processing by BlogsController#update as HTML
+  Parameters: {"blog"=>{"title"=>"", "content"=>"<p>blog body</p>"}, "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1  [["uid", "abc6@example.com"]]
+  [1m[36mBlog Load (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?[0m  [["provider", "email"], ["email", "abc7@example.com"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["tokens", "{}"], ["name", "abc7"], ["email", "abc7@example.com"], ["encrypted_password", "$2a$04$ssKKOzR8cN1lbWUvZ9Gn5.se7d8h.Z0jkOsCnc09ym5zV03Pmnh5m"], ["uid", "abc7@example.com"], ["created_at", "2016-10-07 05:19:53.093548"], ["updated_at", "2016-10-07 05:19:53.093548"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.095282"], ["updated_at", "2016-10-07 05:19:53.095282"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.096438"], ["updated_at", "2016-10-07 05:19:53.096438"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.097460"], ["updated_at", "2016-10-07 05:19:53.097460"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.098553"], ["updated_at", "2016-10-07 05:19:53.098553"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.099691"], ["updated_at", "2016-10-07 05:19:53.099691"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.100969"], ["updated_at", "2016-10-07 05:19:53.100969"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.102140"], ["updated_at", "2016-10-07 05:19:53.102140"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.103175"], ["updated_at", "2016-10-07 05:19:53.103175"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.104229"], ["updated_at", "2016-10-07 05:19:53.104229"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:19:53.105350"], ["updated_at", "2016-10-07 05:19:53.105350"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"Yphc_4CXoJXpkk0-JESMPQ\":{\"token\":\"$2a$10$SEaHw8YkIJnRGpMwq047/.LoZx6jGjh/S3IbSvtdP0PoP96AFUkX6\",\"expiry\":1477027193,\"last_token\":null,\"updated_at\":\"2016-10-07T10:49:53.170+05:30\"}}"], ["updated_at", "2016-10-07 05:19:53.171717"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBlog Load (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY "blogs"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "blogs"
+Processing by BlogsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1[0m  [["uid", "abc7@example.com"]]
+  [1m[35mBlog Load (0.0ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "blogs" WHERE "blogs"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "blogs"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" IS NULL[0m  [["provider", "email"]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (93.9ms)[0m  DELETE FROM "blogs";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'blogs';
+  [1m[36m (57.4ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?  [["provider", "email"], ["email", "abc1@example.com"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["tokens", "{}"], ["name", "abc1"], ["email", "abc1@example.com"], ["encrypted_password", "$2a$04$JjnT9d9itnDrATvgbNeGBOxFNFmkjLT2dKm6aLfDkKk4v.cw4gLay"], ["uid", "abc1@example.com"], ["created_at", "2016-10-07 05:21:29.538059"], ["updated_at", "2016-10-07 05:21:29.538059"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.545830"], ["updated_at", "2016-10-07 05:21:29.545830"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.547417"], ["updated_at", "2016-10-07 05:21:29.547417"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.548513"], ["updated_at", "2016-10-07 05:21:29.548513"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.549616"], ["updated_at", "2016-10-07 05:21:29.549616"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.550716"], ["updated_at", "2016-10-07 05:21:29.550716"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.551772"], ["updated_at", "2016-10-07 05:21:29.551772"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.552824"], ["updated_at", "2016-10-07 05:21:29.552824"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.553942"], ["updated_at", "2016-10-07 05:21:29.553942"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.555018"], ["updated_at", "2016-10-07 05:21:29.555018"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.556073"], ["updated_at", "2016-10-07 05:21:29.556073"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["tokens", "{\"U6Vb--NbUD3mSx57-jtWPA\":{\"token\":\"$2a$10$chi8LuVJAW.KH9Ko0DlTSeKU27D3gHAejKWkswl8.vxmbEO14a9v.\",\"expiry\":1477027289,\"last_token\":null,\"updated_at\":\"2016-10-07T10:51:29.621+05:30\"}}"], ["updated_at", "2016-10-07 05:21:29.622181"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1  [["uid", "abc1@example.com"]]
+  [1m[36mBlog Load (0.1ms)[0m  [1mSELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY created_at desc[0m  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+  [1m[35mBlog Load (0.1ms)[0m  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY created_at desc  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?  [["provider", "email"], ["email", "abc2@example.com"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["tokens", "{}"], ["name", "abc2"], ["email", "abc2@example.com"], ["encrypted_password", "$2a$04$7M8Iu9bO3VTqtl3I28w7luBXB5/rl7buiVh5kzoQkxEN3csr1Zdx."], ["uid", "abc2@example.com"], ["created_at", "2016-10-07 05:21:29.647388"], ["updated_at", "2016-10-07 05:21:29.647388"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.649099"], ["updated_at", "2016-10-07 05:21:29.649099"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.650330"], ["updated_at", "2016-10-07 05:21:29.650330"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.651443"], ["updated_at", "2016-10-07 05:21:29.651443"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.652503"], ["updated_at", "2016-10-07 05:21:29.652503"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.653582"], ["updated_at", "2016-10-07 05:21:29.653582"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.654716"], ["updated_at", "2016-10-07 05:21:29.654716"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.655802"], ["updated_at", "2016-10-07 05:21:29.655802"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.656845"], ["updated_at", "2016-10-07 05:21:29.656845"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.657943"], ["updated_at", "2016-10-07 05:21:29.657943"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.659003"], ["updated_at", "2016-10-07 05:21:29.659003"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["tokens", "{\"XRUahIcEK6ejtlhAbIK39g\":{\"token\":\"$2a$10$g4cJtHTbqCK9eSfDMLJsN.fo.8lo5Utq6FzB4hTkqp7lxoqYbugAK\",\"expiry\":1477027289,\"last_token\":null,\"updated_at\":\"2016-10-07T10:51:29.724+05:30\"}}"], ["updated_at", "2016-10-07 05:21:29.725241"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mBlog Load (0.1ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY "blogs"."id" ASC LIMIT 1  [["user_id", 1]]
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1[0m  [["uid", "abc2@example.com"]]
+  [1m[35mBlog Load (0.1ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?  [["provider", "email"], ["email", "abc3@example.com"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["tokens", "{}"], ["name", "abc3"], ["email", "abc3@example.com"], ["encrypted_password", "$2a$04$y7si654qm3w8iPqdj.mJ3.9.YzhEaSZADOSEMN.cIuxTrSYDLh7By"], ["uid", "abc3@example.com"], ["created_at", "2016-10-07 05:21:29.734132"], ["updated_at", "2016-10-07 05:21:29.734132"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.735847"], ["updated_at", "2016-10-07 05:21:29.735847"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.737069"], ["updated_at", "2016-10-07 05:21:29.737069"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.738155"], ["updated_at", "2016-10-07 05:21:29.738155"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.739226"], ["updated_at", "2016-10-07 05:21:29.739226"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.740362"], ["updated_at", "2016-10-07 05:21:29.740362"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.741520"], ["updated_at", "2016-10-07 05:21:29.741520"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.742643"], ["updated_at", "2016-10-07 05:21:29.742643"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.743698"], ["updated_at", "2016-10-07 05:21:29.743698"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.744754"], ["updated_at", "2016-10-07 05:21:29.744754"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.745831"], ["updated_at", "2016-10-07 05:21:29.745831"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["tokens", "{\"5dck7XFtMe-7UH85LMo8jA\":{\"token\":\"$2a$10$7WFFvLWwiM1AmRQ5G76nrujyUuM8WUgyqO3BZ6KOA95rnC5bWSuda\",\"expiry\":1477027289,\"last_token\":null,\"updated_at\":\"2016-10-07T10:51:29.811+05:30\"}}"], ["updated_at", "2016-10-07 05:21:29.812171"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "blogs"
+Processing by BlogsController#create as HTML
+  Parameters: {"blog"=>{"title"=>"New Title", "content"=>"<p>blog body</p>"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1[0m  [["uid", "abc3@example.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "New Title"], ["content", "<p>blog body</p>"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.817520"], ["updated_at", "2016-10-07 05:21:29.817520"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 201 Created in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?[0m  [["provider", "email"], ["email", "abc4@example.com"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["tokens", "{}"], ["name", "abc4"], ["email", "abc4@example.com"], ["encrypted_password", "$2a$04$wM5dtDMiZoScBEXuwgAl7.WnS07DOMvS.9CV3DCR1AfyUYtIBfGoK"], ["uid", "abc4@example.com"], ["created_at", "2016-10-07 05:21:29.823177"], ["updated_at", "2016-10-07 05:21:29.823177"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.824859"], ["updated_at", "2016-10-07 05:21:29.824859"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.826085"], ["updated_at", "2016-10-07 05:21:29.826085"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.827177"], ["updated_at", "2016-10-07 05:21:29.827177"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.828237"], ["updated_at", "2016-10-07 05:21:29.828237"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.829297"], ["updated_at", "2016-10-07 05:21:29.829297"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.830425"], ["updated_at", "2016-10-07 05:21:29.830425"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.831519"], ["updated_at", "2016-10-07 05:21:29.831519"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.832579"], ["updated_at", "2016-10-07 05:21:29.832579"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.833643"], ["updated_at", "2016-10-07 05:21:29.833643"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.834713"], ["updated_at", "2016-10-07 05:21:29.834713"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"t77ahvySHKbSD68gFRg54A\":{\"token\":\"$2a$10$LrFyiGZ9tJK7nAuHiTUg3.oqWRcslYB1lb7wCGqb1vXBs9cv4AATK\",\"expiry\":1477027289,\"last_token\":null,\"updated_at\":\"2016-10-07T10:51:29.900+05:30\"}}"], ["updated_at", "2016-10-07 05:21:29.900962"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BlogsController#create as HTML
+  Parameters: {"blog"=>{"title"=>"", "content"=>"<p>blog body</p>"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1[0m  [["uid", "abc4@example.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 12ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?[0m  [["provider", "email"], ["email", "abc5@example.com"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["tokens", "{}"], ["name", "abc5"], ["email", "abc5@example.com"], ["encrypted_password", "$2a$04$Y4xEedcRzNcOQq4jXtdoX.WkaLHG9hIAhCfRRW5KVvXz85KMdZjfa"], ["uid", "abc5@example.com"], ["created_at", "2016-10-07 05:21:29.927448"], ["updated_at", "2016-10-07 05:21:29.927448"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.929217"], ["updated_at", "2016-10-07 05:21:29.929217"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.930459"], ["updated_at", "2016-10-07 05:21:29.930459"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.931590"], ["updated_at", "2016-10-07 05:21:29.931590"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.932670"], ["updated_at", "2016-10-07 05:21:29.932670"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.933972"], ["updated_at", "2016-10-07 05:21:29.933972"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.936228"], ["updated_at", "2016-10-07 05:21:29.936228"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.937823"], ["updated_at", "2016-10-07 05:21:29.937823"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.938921"], ["updated_at", "2016-10-07 05:21:29.938921"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.940007"], ["updated_at", "2016-10-07 05:21:29.940007"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:29.941075"], ["updated_at", "2016-10-07 05:21:29.941075"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"CQoPXgQsq3gleYFc6xdaqA\":{\"token\":\"$2a$10$NEjM2QXKEAjgjbS3ToYuVOylDWElacgViBY5TFSOVAAIpZQbqzTe2\",\"expiry\":1477027290,\"last_token\":null,\"updated_at\":\"2016-10-07T10:51:30.006+05:30\"}}"], ["updated_at", "2016-10-07 05:21:30.007089"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBlog Load (0.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY "blogs"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Processing by BlogsController#update as HTML
+  Parameters: {"blog"=>{"content"=>"New Attribute"}, "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1  [["uid", "abc5@example.com"]]
+  [1m[36mBlog Load (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "blogs" SET "content" = ?, "updated_at" = ? WHERE "blogs"."id" = ?[0m  [["content", "New Attribute"], ["updated_at", "2016-10-07 05:21:30.011397"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+  [1m[36mBlog Load (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?[0m  [["provider", "email"], ["email", "abc6@example.com"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["tokens", "{}"], ["name", "abc6"], ["email", "abc6@example.com"], ["encrypted_password", "$2a$04$LWiogPA3EIef4bYrxe0hDei6q8tBe0ZahZfY5Y6FRaAKHCK6CqeYm"], ["uid", "abc6@example.com"], ["created_at", "2016-10-07 05:21:30.017499"], ["updated_at", "2016-10-07 05:21:30.017499"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.019243"], ["updated_at", "2016-10-07 05:21:30.019243"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.020492"], ["updated_at", "2016-10-07 05:21:30.020492"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.021709"], ["updated_at", "2016-10-07 05:21:30.021709"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.022917"], ["updated_at", "2016-10-07 05:21:30.022917"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.024164"], ["updated_at", "2016-10-07 05:21:30.024164"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.025332"], ["updated_at", "2016-10-07 05:21:30.025332"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.026549"], ["updated_at", "2016-10-07 05:21:30.026549"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.027751"], ["updated_at", "2016-10-07 05:21:30.027751"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.028969"], ["updated_at", "2016-10-07 05:21:30.028969"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.030122"], ["updated_at", "2016-10-07 05:21:30.030122"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"sdLI5nKIVUbTkF5zQtjxNQ\":{\"token\":\"$2a$10$4xuHftiQM.Pu8jrdQi74Ne4yC0kZCX61adi312MCEiZMq3Nbimh7e\",\"expiry\":1477027290,\"last_token\":null,\"updated_at\":\"2016-10-07T10:51:30.095+05:30\"}}"], ["updated_at", "2016-10-07 05:21:30.096350"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBlog Load (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY "blogs"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Processing by BlogsController#update as HTML
+  Parameters: {"blog"=>{"title"=>"", "content"=>"<p>blog body</p>"}, "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1  [["uid", "abc6@example.com"]]
+  [1m[36mBlog Load (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?[0m  [["provider", "email"], ["email", "abc7@example.com"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["tokens", "{}"], ["name", "abc7"], ["email", "abc7@example.com"], ["encrypted_password", "$2a$04$JnEY2Q1j8NeCeCHs2jHoF.phhrYv8w3KI7CBZTSIbgt/qP.KDkiL."], ["uid", "abc7@example.com"], ["created_at", "2016-10-07 05:21:30.105424"], ["updated_at", "2016-10-07 05:21:30.105424"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.107227"], ["updated_at", "2016-10-07 05:21:30.107227"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.108502"], ["updated_at", "2016-10-07 05:21:30.108502"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.109608"], ["updated_at", "2016-10-07 05:21:30.109608"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.110697"], ["updated_at", "2016-10-07 05:21:30.110697"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.111765"], ["updated_at", "2016-10-07 05:21:30.111765"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.112956"], ["updated_at", "2016-10-07 05:21:30.112956"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.114205"], ["updated_at", "2016-10-07 05:21:30.114205"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.115372"], ["updated_at", "2016-10-07 05:21:30.115372"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.116440"], ["updated_at", "2016-10-07 05:21:30.116440"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.117506"], ["updated_at", "2016-10-07 05:21:30.117506"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"0RXSyDeGPmxCWJOziSZw8g\":{\"token\":\"$2a$10$g7DhpmvbjwoqjeYrCjhe8ebTiEfUm9GpYU6WnDzES5Jy0UuS6DD6e\",\"expiry\":1477027290,\"last_token\":null,\"updated_at\":\"2016-10-07T10:51:30.182+05:30\"}}"], ["updated_at", "2016-10-07 05:21:30.183772"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBlog Load (0.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."user_id" = ?  ORDER BY "blogs"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "blogs"
+Processing by BlogsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1[0m  [["uid", "abc7@example.com"]]
+  [1m[35mBlog Load (0.0ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "blogs" WHERE "blogs"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "blogs"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."provider" = ? AND "users"."email" = ?  [["provider", "email"], ["email", "abc8@example.com"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("tokens", "name", "email", "encrypted_password", "uid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["tokens", "{}"], ["name", "abc8"], ["email", "abc8@example.com"], ["encrypted_password", "$2a$04$ChcwxqsX.R9dZTUvXPEJje1RagwH5hAtgeuT/LIEvhp190BoA8v8K"], ["uid", "abc8@example.com"], ["created_at", "2016-10-07 05:21:30.192630"], ["updated_at", "2016-10-07 05:21:30.192630"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.194362"], ["updated_at", "2016-10-07 05:21:30.194362"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.195611"], ["updated_at", "2016-10-07 05:21:30.195611"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.196711"], ["updated_at", "2016-10-07 05:21:30.196711"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.197820"], ["updated_at", "2016-10-07 05:21:30.197820"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.198898"], ["updated_at", "2016-10-07 05:21:30.198898"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.200018"], ["updated_at", "2016-10-07 05:21:30.200018"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.201150"], ["updated_at", "2016-10-07 05:21:30.201150"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.202256"], ["updated_at", "2016-10-07 05:21:30.202256"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.203337"], ["updated_at", "2016-10-07 05:21:30.203337"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "blogs" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["content", "MyText"], ["user_id", 1], ["created_at", "2016-10-07 05:21:30.204431"], ["updated_at", "2016-10-07 05:21:30.204431"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m

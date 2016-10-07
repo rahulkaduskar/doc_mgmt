@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Blog, type: :model do
   subject { described_class.new }
-  describe User do
+  describe Blog do
     it "is valid with valid attributes" do
       subject.title = "Anything"
       subject.user =  FactoryGirl.create(:user)
